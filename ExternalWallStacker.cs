@@ -316,7 +316,7 @@ namespace Oxide.Plugins
 
         #endregion
 
-        #region Hooks
+        #region Oxide Hooks
         /*
          * Name: OnEntityBuilt
          * Parameters: Planner planner, GameObject gameObject
@@ -507,7 +507,7 @@ namespace Oxide.Plugins
 
         }
 
-        #endregion
+        #endregion Oxide Hooks
 
         #region Chat Commands
 
