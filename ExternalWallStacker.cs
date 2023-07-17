@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Oxide.Plugins
 {
     [Info("External Wall Stacker", "Dana", "1.0.2")]
-    [Description("Build tall and mighty walls")]
+    [Description("Build skyscraper-like walls.")]
 
     public class ExternalWallStacker : RustPlugin
     {
@@ -72,11 +72,16 @@ namespace Oxide.Plugins
             // Create an emply ExternalWallLink.
             ExternalWallLink entityLink;
 
+            BaseEntity previousWall = entity;
+
             // Loop until the value of index is greater than the value of amount plus one.
             for (int index = 1; index < amount + 1; index++)
             {
-                // Create an high external wall.
+                // Create a high external wall.
                 BaseEntity wall = GameManager.server.CreateEntity(entity.PrefabName, entity.transform.position + new Vector3(0f, 5.5f * (float)index, 0f), entity.transform.rotation, true);
+                // Set the parent of the newly created wall to the previous wall
+                wall.SetParent(previousWall, true, false);
+
                 // Activate the high external wall game object.
                 wall.gameObject.SetActive(true);
                 // Spawn the high external wall game object.
@@ -107,6 +112,9 @@ namespace Oxide.Plugins
 
                 // Add the ExternalWallLink to the list of ExternalWallLink(s).
                 links.Add(entityLink);
+
+                // Set the newly created wall as the previous wall for the next iteration
+                previousWall = wall;
             }
 
             // Return the list of ExternalWallLink(s).
