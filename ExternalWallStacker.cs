@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("External Wall Stacker", "Dana", "1.0.2")]
+    [Info("External Wall Stacker", "Dana", "1.0.3")]
     [Description("Build skyscraper-like walls.")]
 
     public class ExternalWallStacker : RustPlugin
