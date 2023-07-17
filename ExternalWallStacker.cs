@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Oxide.Core.Plugins;
@@ -316,7 +316,7 @@ namespace Oxide.Plugins
 
         #endregion
 
-        #region Oxide Hooks
+        #region Hooks
         /*
          * Name: OnEntityBuilt
          * Parameters: Planner planner, GameObject gameObject
@@ -507,7 +507,7 @@ namespace Oxide.Plugins
 
         }
 
-        #endregion Oxide Hooks
+        #endregion
 
         #region Chat Commands
 
