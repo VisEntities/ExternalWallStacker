@@ -41,3 +41,6 @@ When the user places an high external wall, a # of externals walls are stacked o
 [LIST]
 [*][B]Description[/B]: The message that is displayed to the user if they successfully run the chat command /wstack.
 [/LIST]
+
+## Credits
+* Originally created by Dyceman - Deadlaugh
